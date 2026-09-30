@@ -4,6 +4,8 @@ import LogoTicker from "@/components/LogoTicker";
 import Courses from "@/components/Courses";
 import LearningPaths from "@/components/LearningPaths";
 import CTA from "@/components/CTA";
+import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Courses />
       <LearningPaths />
       <CTA />
+      <Testimonials />
+      <Footer />
     </main>
   );
 }
