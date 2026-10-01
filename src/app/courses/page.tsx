@@ -64,11 +64,15 @@ function CoursesContent() {
 
   // ---- FILTERING ----
   let results = coursesData.filter((course) => {
-    const matchesCategory = course.categories.includes(activeCategory);
+    // When a search term is active, search across ALL categories (ignore active tab)
+    // so users coming from the homepage search always see results
+    const searchIsActive = query.trim() !== '';
+    const matchesCategory = searchIsActive || course.categories.includes(activeCategory);
     const matchesSearch =
-      query.trim() === '' ||
-      course.title.toLowerCase().includes(query.toLowerCase()) ||
-      course.author.toLowerCase().includes(query.toLowerCase());
+      searchIsActive
+        ? course.title.toLowerCase().includes(query.toLowerCase()) ||
+          course.author.toLowerCase().includes(query.toLowerCase())
+        : true;
     const matchesLevel =
       selectedLevel === 'All Levels' || course.level === selectedLevel;
     return matchesCategory && matchesSearch && matchesLevel;
