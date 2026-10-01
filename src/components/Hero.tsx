@@ -71,11 +71,11 @@ export default function Hero() {
         <img
           src="/assets/heroperson.webp"
           alt="Student"
-          className="max-h-[550px] w-auto object-contain object-bottom pointer-events-auto relative z-10 translate-x-4 lg:translate-x-6"
+          className="max-h-[550px] w-auto object-contain object-bottom pointer-events-auto relative z-10 translate-x-4 lg:translate-x-6 hero-person"
         />
 
         {/* Top Left Card */}
-        <div className="absolute top-[32%] left-[8%] lg:left-[10%] bg-white rounded-[20px] p-4 pr-8 shadow-[0_20px_40px_rgba(0,0,0,0.12)] pointer-events-auto flex items-center gap-4 hover:-translate-y-1 transition-transform z-20 scale-90 md:scale-100 origin-top-left">
+        <div className="absolute top-[32%] left-[8%] lg:left-[10%] bg-white rounded-[20px] p-4 pr-8 shadow-[0_20px_40px_rgba(0,0,0,0.12)] pointer-events-auto flex items-center gap-4 hover:-translate-y-1 transition-transform z-20 scale-90 md:scale-100 origin-top-left hero-card-left">
           <div>
             <p className="font-semibold text-[15px] text-text-dark font-satoshi">UI/UX Design</p>
             <p className="text-[12px] text-gray-500 mt-0.5 font-satoshi">200 Courses &bull; 1000+ Students</p>
@@ -83,7 +83,7 @@ export default function Hero() {
         </div>
 
         {/* Top Right Card */}
-        <div className="absolute top-[28%] right-[2%] lg:right-[16%] bg-white rounded-[20px] p-5 shadow-[0_20px_40px_rgba(0,0,0,0.12)] pointer-events-auto w-52 hover:-translate-y-1 transition-transform z-20 scale-90 md:scale-100 origin-top-right">
+        <div className="absolute top-[28%] right-[2%] lg:right-[16%] bg-white rounded-[20px] p-5 shadow-[0_20px_40px_rgba(0,0,0,0.12)] pointer-events-auto w-52 hover:-translate-y-1 transition-transform z-20 scale-90 md:scale-100 origin-top-right hero-card-right">
           <p className="text-[12px] font-medium text-gray-500 mb-2 font-satoshi">Learning Progress</p>
           <p className="text-3xl font-bold text-text-dark font-poppins">55%</p>
           <div className="w-full bg-gray-100 h-2.5 rounded-full mt-3 overflow-hidden">
@@ -92,7 +92,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom Left Card */}
-        <div className="absolute bottom-[8%] left-[0%] lg:left-[6%] bg-white rounded-[20px] p-4 shadow-[0_20px_40px_rgba(0,0,0,0.12)] pointer-events-auto flex flex-col min-w-[220px] hover:-translate-y-1 transition-transform z-20 scale-90 md:scale-100 origin-bottom-left">
+        <div className="absolute bottom-[8%] left-[0%] lg:left-[6%] bg-white rounded-[20px] p-4 shadow-[0_20px_40px_rgba(0,0,0,0.12)] pointer-events-auto flex flex-col min-w-[220px] hover:-translate-y-1 transition-transform z-20 scale-90 md:scale-100 origin-bottom-left hero-card-bottom">
           <p className="text-[14px] font-semibold text-text-dark font-satoshi">Happy Students</p>
           <div className="flex items-center gap-1 mt-1.5 mb-4">
             <p className="text-[13px] font-bold text-text-dark font-satoshi">4.5</p>
