@@ -168,7 +168,7 @@ function CoursesContent() {
                   setQuery('');
                   setCurrentPage(1);
                 }}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-200 text-[14px] font-satoshi font-medium text-gray-600 hover:border-primary hover:text-primary transition-all"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-200 text-[14px] font-satoshi font-medium text-gray-600 hover:border-[#1A32F5] hover:text-[#1A32F5] transition-all"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
@@ -266,7 +266,7 @@ function CoursesContent() {
                     <button
                       key={opt}
                       onClick={() => { setSortBy(opt); setSortOpen(false); setCurrentPage(1); }}
-                      className={`w-full text-left px-5 py-2.5 text-[14px] font-satoshi hover:bg-gray-50 transition-colors ${sortBy === opt ? 'text-primary font-semibold' : 'text-gray-600'}`}
+                      className={`w-full text-left px-5 py-2.5 text-[14px] font-satoshi hover:bg-gray-50 transition-colors ${sortBy === opt ? 'text-[#1A32F5] font-semibold' : 'text-gray-600'}`}
                     >
                       {opt}
                     </button>
