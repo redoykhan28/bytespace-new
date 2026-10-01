@@ -16,7 +16,7 @@ export default function LearningPaths() {
         <h2 className="font-poppins font-semibold text-[42px] leading-[1.3] text-center text-text-dark">
           Explore Diverse Learning Paths at Bytespace
         </h2>
-        <p className="mt-4 text-[16px] md:text-[18px] text-center max-w-xl font-satoshi font-light leading-relaxed" style={{ color: '#82868E' }}>
+        <p className="mt-4 text-[16px] md:text-[18px] text-center max-w-5xl font-satoshi font-light leading-relaxed" style={{ color: '#82868E' }}>
           At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there&apos;s something for everyone. Unleash your potential and explore our carefully curated categories.
         </p>
 
@@ -32,7 +32,7 @@ export default function LearningPaths() {
                 alt={cat.name}
                 className="w-14 h-14 object-contain"
               />
-              <p className="font-satoshi font-semibold text-[16px] text-text-dark text-center group-hover:text-primary transition-colors">
+              <p className="font-satoshi font-semibold text-[16px] text-text-dark text-center group-hover:text-[#1A32F5] transition-colors">
                 {cat.name}
               </p>
             </div>

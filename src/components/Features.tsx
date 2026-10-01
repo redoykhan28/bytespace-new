@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AnimatedImage from "@/components/AnimatedImage";
 
 export default function Features() {
   return (
@@ -45,7 +45,8 @@ export default function Features() {
           {/* Image */}
           <div className="w-full lg:w-1/2 flex justify-end">
             <div className="relative w-full lg:max-w-[650px] lg:-mr-10">
-              <Image
+              <AnimatedImage
+                useNextImage={true}
                 src="/assets/sideframe1.png"
                 alt="Professional Growth"
                 width={650}
@@ -65,7 +66,8 @@ export default function Features() {
               {/* Background Glow 4 - Bottom Left Yellow near image */}
               <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#D4FB20]/40 rounded-full blur-[100px] -translate-x-1/4 translate-y-1/4 pointer-events-none -z-10"></div>
               
-              <Image
+              <AnimatedImage
+                useNextImage={true}
                 src="/assets/sideframe2.png"
                 alt="Create Courses"
                 width={650}

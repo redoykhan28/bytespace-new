@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import AnimatedImage from '@/components/AnimatedImage';
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -79,7 +80,7 @@ export default function Register() {
 
           {/* Graphics */}
           <div className="relative flex-1 flex items-start justify-start pointer-events-none">
-            <img 
+            <AnimatedImage 
               src="/assets/login-img.png" 
               alt="Platform Preview" 
               className="w-full max-w-[500px] object-contain relative -left-4 lg:-left-6"
