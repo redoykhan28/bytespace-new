@@ -1,6 +1,23 @@
-import Image from 'next/image';
+"use client";
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Hero() {
+  const [query, setQuery] = useState('');
+  const router = useRouter();
+
+  // When user hits Search, redirect to courses archive with the query pre-filled
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = query.trim();
+    if (trimmed) {
+      router.push('/courses?q=' + encodeURIComponent(trimmed));
+    } else {
+      router.push('/courses');
+    }
+  };
+
   return (
     <section
       className="relative w-full flex flex-col items-center overflow-hidden pt-[150px] pb-0"
@@ -21,8 +38,11 @@ export default function Hero() {
           Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
         </p>
 
-        {/* Search Bar */}
-        <div className="mt-10 w-full max-w-2xl bg-white rounded-full p-2 flex items-center shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+        {/* Search Bar — submits and redirects to /courses?q=... */}
+        <form
+          onSubmit={handleSearch}
+          className="mt-10 w-full max-w-2xl bg-white rounded-full p-2 flex items-center shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+        >
           <div className="pl-5 pr-3 text-gray-500">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
@@ -31,13 +51,18 @@ export default function Hero() {
           </div>
           <input
             type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
             placeholder="Course, topic, creator"
             className="flex-1 bg-transparent outline-none text-text-dark text-[16px] font-satoshi px-2 placeholder:text-gray-400"
           />
-          <button className="bg-primary text-text-dark font-medium px-8 md:px-10 py-3 rounded-full hover:bg-[#c3e817] transition-all text-[16px] shadow-sm">
+          <button
+            type="submit"
+            className="bg-primary text-text-dark font-medium px-8 md:px-10 py-3 rounded-full hover:bg-[#c3e817] transition-all text-[16px] shadow-sm"
+          >
             Search
           </button>
-        </div>
+        </form>
       </div>
 
       {/* Graphics Area (Person + Cards) */}
