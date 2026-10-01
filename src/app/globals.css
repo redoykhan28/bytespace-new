@@ -1,26 +1,74 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary: #D4FB20;
+  --color-text-dark: #242528;
+  --font-satoshi: 'Satoshi', sans-serif;
+  --font-poppins: var(--font-poppins), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-satoshi);
+  color: var(--color-text-dark);
+}
+
+/* ── Hero Section Animations ─────────────────────────── */
+
+/* Person slides up from below the viewport */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cards pop in with a springy scale bounce */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(20px);
+  }
+  70% {
+    transform: scale(1.06) translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.hero-person {
+  animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+/* Each card pops in after the person, with staggered delays */
+.hero-card-left {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
+  opacity: 0;
+}
+
+.hero-card-right {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.85s forwards;
+  opacity: 0;
+}
+
+.hero-card-bottom {
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.05s forwards;
+  opacity: 0;
+}
+
+.animate-pop-in {
+  animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+/* Global clickable cursors */
+a, button, [role="button"], [role="tab"], .group {
+  cursor: pointer;
 }
