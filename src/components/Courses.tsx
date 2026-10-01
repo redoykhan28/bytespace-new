@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import coursesData from '@/data/courses.json';
 
 const categories = [
@@ -44,9 +45,9 @@ export default function Courses() {
               {cat}
             </button>
           ))}
-          <button className="px-5 py-2.5 rounded-full text-[14px] font-semibold font-satoshi text-blue-600 hover:bg-blue-50 transition-all">
+          <Link href="/courses" className="px-5 py-2.5 rounded-full text-[14px] font-semibold font-satoshi text-blue-600 hover:bg-blue-50 transition-all">
             + More
-          </button>
+          </Link>
         </div>
 
         {/* Course Grid */}

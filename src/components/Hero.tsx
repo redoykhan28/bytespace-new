@@ -41,10 +41,6 @@ export default function Hero() {
       </div>
 
       {/* Graphics Area (Person + Cards) */}
-      {/* 
-        By using margin-top and normal document flow, this container will ALWAYS 
-        sit below the search bar and will never overlap.
-      */}
       <div className="relative mt-16 lg:mt-20 w-full max-w-[950px] flex justify-center items-end pointer-events-none z-10">
         {/* Center Person image - Sets the height of the container */}
         <img

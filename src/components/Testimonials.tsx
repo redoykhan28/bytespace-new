@@ -27,10 +27,10 @@ export default function Testimonials() {
     <section
       className="w-full py-[80px]"
       style={{
-        backgroundColor: "#ffffff",
-        backgroundImage: `
-          radial-gradient(circle at 75% 15%, rgba(212, 251, 32, 0.45) 0%, rgba(255, 255, 255, 0) 50%),
-          radial-gradient(circle at 5% 95%, rgba(210, 228, 255, 0.7) 0%, rgba(255, 255, 255, 0) 45%)
+        background: `
+          radial-gradient(ellipse 70% 60% at 100% 0%, rgba(212, 251, 32, 0.5) 0%, transparent 100%),
+          radial-gradient(ellipse 60% 80% at 0% 50%, rgba(180, 200, 255, 0.45) 0%, transparent 100%),
+          #ffffff
         `
       }}
     >
